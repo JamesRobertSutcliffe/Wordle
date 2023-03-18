@@ -19,7 +19,7 @@ function App() {
     <div>
       <h1>Wordle</h1>
       <Board />
-      <h2>{solution}</h2>
+      {solution && <h2>Solution is {solution}!</h2>}
     </div>
 
   );
