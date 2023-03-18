@@ -7,3 +7,8 @@ wordle -
 5 - if an guess array matches answer array complete - if not push to next row
 6 - if guess index matches answer index and is included in array turn background green, if it is included turn yellow
 7 - BACKEND!
+
+
+tutorial - 
+
+https://www.youtube.com/watch?v=BpNthEFnoJ0&list=PL4cUxeGkcC9gXdVXVJBmHpSI7zCEcjLUX&index=2
