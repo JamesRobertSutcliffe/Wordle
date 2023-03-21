@@ -7,12 +7,26 @@ function App() {
 
   const [solution, setSolution] = useState(null);
 
+
   useEffect(() => {
-    axios.get("http://localhost:3003/solutions").then((response) => {
-      const randomSolution = response.data[Math.floor(Math.random() * response.data.length)]
-      setSolution(randomSolution.word);
-      console.log(randomSolution.word);
-    })
+
+    const options = {
+      method: 'GET',
+      url: 'https://wordle-answers-solutions.p.rapidapi.com/answers',
+      headers: {
+        'X-RapidAPI-Key': '16f7a722d7msh33d1b391f70ea73p10d499jsn96cf244bdfab',
+        'X-RapidAPI-Host': 'wordle-answers-solutions.p.rapidapi.com'
+      }
+    };
+
+    axios.request(options).then(function (response) {
+      const randomSolution = response.data.data[Math.floor(Math.random() * response.data.data.length)]
+      console.log(randomSolution.answer);
+      setSolution(randomSolution.answer);
+    }).catch(function (error) {
+      console.error(error);
+    });
+
   }, [setSolution]);
 
   return (
@@ -20,6 +34,7 @@ function App() {
       <h1>Wordle</h1>
       <Board />
       {solution && <h2>Solution is {solution}!</h2>}
+      <h2>chip</h2>
     </div>
 
   );
