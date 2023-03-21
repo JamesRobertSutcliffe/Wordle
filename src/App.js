@@ -1,6 +1,7 @@
 import './App.css';
 import Board from './components/board/board';
 import axios from 'axios';
+import Wordle from './components/logic/Wordle';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -33,8 +34,7 @@ function App() {
     <div>
       <h1>Wordle</h1>
       <Board />
-      {solution && <h2>Solution is {solution}!</h2>}
-      <h2>chip</h2>
+      {solution && <Wordle solution={solution} />}
     </div>
 
   );
