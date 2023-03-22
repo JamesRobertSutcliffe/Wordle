@@ -38,7 +38,7 @@ const useWordle = (solution) => {
         }
 
         setGuesses((prevGuesses) => {
-            let newGuesses = [prevGuesses];
+            let newGuesses = [...prevGuesses];
             newGuesses[turn] = formattedGuess;
             return newGuesses;
         })
