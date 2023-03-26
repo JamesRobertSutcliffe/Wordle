@@ -1,6 +1,8 @@
-import React from "react";
+
+import react from "react";
 
 const Modal = ({ isCorrect, turn, solution }) => {
+
     return <div className="modal">
         {isCorrect && (
             <div>
