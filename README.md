@@ -1,14 +1,16 @@
-wordle -
+# React Wordle Clone
 
-1 - build layout, 5 rows of 5 boxes then keyboard below
-2 - set data id to all keys
-3 - set answers as an array
-4 - when selected push an answer to guess array
-5 - if an guess array matches answer array complete - if not push to next row
-6 - if guess index matches answer index and is included in array turn background green, if it is included turn yellow
-7 - BACKEND!
+## Description
 
+This project clones the classic online word game "Worldle" that runs daily on the New York Times website. The rules are simple, guess a 5 letter word in up to 6 guesses, with colorised letter prompts guiding your responses. The project was developed in react.
 
-tutorial - 
+**Use your keys** to make your guess by typing letters and using the enter key. Try to work out the solution by the hints obtained from previous guesses signified by coloured letters. If you win the game you can input your name and see this added to the scoreboard pulled from the created API server.
 
-https://www.youtube.com/watch?v=BpNthEFnoJ0&list=PL4cUxeGkcC9gXdVXVJBmHpSI7zCEcjLUX&index=2
+The rules of the same are as follows:
+
+- You have to guess the Wordle in six goes or less
+- A correct letter turns green
+- A correct letter in the wrong place turns yellow
+- An incorrect letter turns gray
+- Letters can be used more than once
+- Answers are never plurals
